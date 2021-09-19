@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Digit from './components/digit';
+import Result from './components/result';
+import React, { useState } from 'react';
 
 function App() {
+  const [result, setResult] = useState(0);
+  // this aint showing anything...
+  // this is like learning how html and javascript interacted all over again tbh...
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Result result={result} />
+      <Digit number={1} setResult={setResult}/>
+
     </div>
   );
+
+  /*
+      <Digit number={1} setResult={setResult}/>
+  */
 }
 
 export default App;

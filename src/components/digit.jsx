@@ -1,8 +1,14 @@
 import React from "react";
 
-const Digit = ({number}) => {
+const Digit = ({number, setResult}) => {
+    const digitHandler = (event) => {
+        console.log("digitHandler has been pressed")
+        setResult(event.target.value)
+        return;
+    }
+
     return (
-        <button>{number}</button>
+        <button value={number} onClick={digitHandler}>{number}</button>
     )
 }
 
