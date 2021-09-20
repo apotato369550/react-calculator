@@ -1,9 +1,9 @@
 import React from "react";
 
-const Digit = ({number, setResult}) => {
+const Digit = ({number, result, setResult}) => {
     const digitHandler = (event) => {
         console.log("digitHandler has been pressed")
-        setResult(event.target.value)
+        setResult(result + "" + event.target.value);
         return;
     }
 
