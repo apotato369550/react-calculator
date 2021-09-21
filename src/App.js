@@ -3,16 +3,18 @@ import './App.css';
 import Digit from './components/digit';
 import Result from './components/result';
 import Delete from './components/delete';
+import Operation from './components/operation';
 import React, { useState } from 'react';
 
 function App() {
   const [result, setResult] = useState("0");
+  const [currentOperation, setCurrentOperation] = useState("");
   // this aint showing anything...
   // this is like learning how html and javascript interacted all over again tbh...
 
   return (
     <div>
-      <Result result={result} />
+      <Result result={result} currentOperation={currentOperation}/>
 
       <Digit number={"1"} result={result} setResult={setResult}/>
       <Digit number={"2"} result={result} setResult={setResult}/>
@@ -27,6 +29,11 @@ function App() {
       <Digit number={"00"} result={result} setResult={setResult}/>
 
       <Delete result={result} setResult={setResult}/>
+
+      <Operation operation={"+"} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation}/>
+      <Operation operation={"-"} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation}/>
+      <Operation operation={"*"} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation}/>
+      <Operation operation={"/"} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation}/>
 
     </div>
   );
