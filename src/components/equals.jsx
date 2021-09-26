@@ -1,6 +1,6 @@
 import React from "react";
 
-const Equals = () => {
+const Equals = ({result, setResult, answer}) => {
     return (
         <button>=</button>
     )

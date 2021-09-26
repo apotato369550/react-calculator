@@ -4,7 +4,9 @@ const Delete = ({result, setResult}) =>{
     const deleteHandler = (event) => { 
         console.log("Delete handler has been pressed");
         // result/newresult is not a string
-        setResult(result.substr(0, result.length - 1));
+        if(result.length > 1 && result !== "0"){
+            setResult(result.substr(0, result.length - 1));
+        } 
         return;
     }
 

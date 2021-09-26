@@ -1,11 +1,8 @@
 import React from "react";
 
-const Result = ({result, currentOperation}) => {
+const Result = ({result}) => {
     return (
-        <div>
-            <div>Result: {result}</div>
-            <div>Current Operation: {currentOperation}</div>
-        </div>
+        <span>{result}</span>
     )
 }
 
