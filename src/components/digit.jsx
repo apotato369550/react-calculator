@@ -1,11 +1,12 @@
 import React from "react";
 
-const Digit = ({number, result, setResult, currentOperation, setCurrentOperation, operators, setOperators}) => {
+const Digit = ({number, result, setResult, currentOperation, setCurrentOperation, operators, setOperators, expression, setExpression}) => {
     const digitHandler = (event) => {
         console.log("digitHandler has been pressed")
 
         if(currentOperation != ""){
             setOperators([...operators, currentOperation])
+            setExpression([...expression, currentOperation])
             setCurrentOperation("")
         }
 

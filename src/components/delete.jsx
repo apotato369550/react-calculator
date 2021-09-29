@@ -7,6 +7,10 @@ const Delete = ({result, setResult}) =>{
         if(result.length > 1 && result !== "0"){
             setResult(result.substr(0, result.length - 1));
         } 
+
+        if(result.length === 1){
+            setResult("0")
+        }
         return;
     }
 
