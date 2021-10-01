@@ -15,7 +15,7 @@ const Delete = ({result, setResult}) =>{
     }
 
     return (
-        <button onClick={deleteHandler}>Delete</button>
+        <button onClick={deleteHandler}>Delete Digit</button>
     )
 }
 
