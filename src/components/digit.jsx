@@ -1,7 +1,10 @@
 import React from "react";
 
-const Digit = ({number, result, setResult, currentOperation, setCurrentOperation, expression, setExpression}) => {
+const Digit = ({number, result, setResult, currentOperation, setCurrentOperation, expression, setExpression, power}) => {
     const digitHandler = (event) => {
+        if(!power){
+            return;
+        }
         console.log("digitHandler has been pressed")
 
         if(currentOperation != ""){

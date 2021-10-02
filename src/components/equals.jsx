@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const Equals = ({result, setResult, expression, setExpression, setCurrentOperation}) => {
+const Equals = ({result, setResult, expression, setExpression, setCurrentOperation, power}) => {
 
     const precedence = (operator) => {
         if(operator == "+" || operator == "-"){
@@ -68,6 +68,9 @@ const Equals = ({result, setResult, expression, setExpression, setCurrentOperati
 
 
     const equalsHandler = (event) => {
+        if(!power){
+            return;
+        }
         setExpression([...expression, result, "="])
         setCurrentOperation("");
 
