@@ -26,7 +26,7 @@ const Digit = ({number, result, setResult, currentOperation, setCurrentOperation
     }
 
     return (
-        <button value={number} onClick={digitHandler}>{number}</button>
+        <button className="row" value={number} onClick={digitHandler}>{number}</button>
     )
 }
 

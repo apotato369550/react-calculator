@@ -13,7 +13,7 @@ const Decimal = ({result, setResult, power}) =>{
     }
 
     return (
-        <button onClick={addDecimal}>.</button>
+        <button className="row" onClick={addDecimal}>.</button>
     )
 }
 

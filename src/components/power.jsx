@@ -12,7 +12,7 @@ const Power = ({power, setPower, setResult}) =>{
     }
 
     return (
-        <button onClick={powerHandler}>On/Off</button>
+        <button className="row" onClick={powerHandler}>On/Off</button>
     )
 }
 

@@ -13,7 +13,7 @@ const Operation = ({operation, result, setResult, setCurrentOperation, expressio
     }
     
     return (
-        <button onClick={operationHandler}>{operation}</button>
+        <button className="row" onClick={operationHandler}>{operation}</button>
     )
 }
 
