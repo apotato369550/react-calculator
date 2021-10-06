@@ -18,7 +18,7 @@ const Reset = ({setExpression, setResult, setCurrentOperation, power}) =>{
     }
 
     return (
-        <button className="row" onClick={resetHandler}>Reset</button>
+        <button className="col btn btn-warning" onClick={resetHandler}>Reset</button>
     )
 }
 

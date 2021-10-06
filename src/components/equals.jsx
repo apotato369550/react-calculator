@@ -87,7 +87,7 @@ const Equals = ({result, setResult, expression, setExpression, setCurrentOperati
     }, [expression]);
 
     return (
-        <button className="row" onClick={equalsHandler}>=</button>
+        <button className="col btn btn-success" onClick={equalsHandler}>=</button>
     )
 }
 

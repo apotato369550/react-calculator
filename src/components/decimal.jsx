@@ -11,9 +11,11 @@ const Decimal = ({result, setResult, power}) =>{
             setResult(result + ".");
         }
     }
+    
+    // figure out why bootstrap aint working on my react application
 
     return (
-        <button className="row" onClick={addDecimal}>.</button>
+        <button className="col btn btn-primary" onClick={addDecimal}>.</button>
     )
 }
 

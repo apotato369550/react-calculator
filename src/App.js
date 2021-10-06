@@ -9,16 +9,17 @@ import Reset from './components/reset';
 import Power from './components/power';
 import React, { useState, useEffect } from 'react';
 
+// import/source bootstrap here
+
 function App() {
   const [result, setResult] = useState("0");
   const [currentOperation, setCurrentOperation] = useState("");
   const [expression, setExpression] = useState([])
   const [power, setPower] = useState(true)
-  // test the things
-  
+  // fix color theme for buttons
 
   return (
-    <div className="Container">
+    <div className="container w-50">
       
       <div className="row"><span className="col"> Current Operation: {currentOperation}</span> <span className="col"> Result: <Result result={result} /></span> </div>
       
@@ -34,8 +35,8 @@ function App() {
         <Digit number={"4"} result={result} setResult={setResult} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} expression={expression} setExpression={setExpression} power={power}/>
         <Digit number={"5"} result={result} setResult={setResult} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} expression={expression} setExpression={setExpression} power={power}/>
         <Digit number={"6"} result={result} setResult={setResult} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} expression={expression} setExpression={setExpression} power={power}/>
-        <Reset setExpression={setExpression} setCurrentOperation={setCurrentOperation} setResult={setResult} power={power}/>
         <Operation operation={"*"} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} result={result} setResult={setResult} expression={expression} setExpression={setExpression} power={power}/>
+        <Reset setExpression={setExpression} setCurrentOperation={setCurrentOperation} setResult={setResult} power={power}/>
       </div>
 
       <div class="row">

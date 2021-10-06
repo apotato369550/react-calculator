@@ -18,7 +18,7 @@ const Delete = ({result, setResult, power}) =>{
     }
 
     return (
-        <button className="row" onClick={deleteHandler}>Delete Digit</button>
+        <button className="col btn btn-danger" onClick={deleteHandler}>Del</button>
     )
 }
 
