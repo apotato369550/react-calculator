@@ -1,4 +1,5 @@
 import './App.css';
+import './css/style.css';
 import Digit from './components/digit';
 import Result from './components/result';
 import Delete from './components/delete';
@@ -7,7 +8,7 @@ import Operation from './components/operation';
 import Equals from './components/equals';
 import Reset from './components/reset';
 import Power from './components/power';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // import/source bootstrap here
 
@@ -17,18 +18,21 @@ function App() {
   const [expression, setExpression] = useState([])
   const [power, setPower] = useState(true)
   // fix color theme for buttons
+  // make buttons smaller
 
   return (
-    <div className="container w-50">
+    <div className="container w-25 p-4 card mt-5">
       
-      <div className="row"><span className="col"> Current Operation: {currentOperation}</span> <span className="col"> Result: <Result result={result} /></span> </div>
+      <div className="row card m-1 mb-3">
+        <Result result={result} currentOperation={currentOperation}/>
+      </div>
       
       <div class="row">
         <Digit number={"7"} result={result} setResult={setResult} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} expression={expression} setExpression={setExpression} power={power}/>
         <Digit number={"8"} result={result} setResult={setResult} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} expression={expression} setExpression={setExpression} power={power}/>
         <Digit number={"9"} result={result} setResult={setResult} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} expression={expression} setExpression={setExpression} power={power}/>
         <Operation operation={"/"} currentOperation={currentOperation} setCurrentOperation={setCurrentOperation} result={result} setResult={setResult} expression={expression} setExpression={setExpression} power={power}/>
-        <Power power={power} setPower={setPower} setResult={setResult} /> 
+        <Power power={power} setPower={setPower} setResult={setResult} setExpression={setExpression} setCurrentOperation={setCurrentOperation}/> 
       </div>
 
       <div class="row">

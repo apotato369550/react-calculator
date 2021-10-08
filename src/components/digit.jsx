@@ -7,13 +7,13 @@ const Digit = ({number, result, setResult, currentOperation, setCurrentOperation
         }
         console.log("digitHandler has been pressed")
 
-        if(currentOperation != ""){
+        if(currentOperation !== ""){
             setExpression([...expression, currentOperation])
             setCurrentOperation("")
         }
 
         if(result === "0" ){
-            if(event.target.value === "00" || event.target.value == "0"){
+            if(event.target.value === "00" || event.target.value === "0"){
                 setResult("0")
             } else {
                 setResult(event.target.value)
@@ -26,7 +26,7 @@ const Digit = ({number, result, setResult, currentOperation, setCurrentOperation
     }
 
     return (
-        <button type="button" className="col btn btn-primary" value={number} onClick={digitHandler}>{number}</button>
+        <button type="button" className="col btn btn-secondary rounded-0 m-1" value={number} onClick={digitHandler}>{number}</button>
     )
 }
 

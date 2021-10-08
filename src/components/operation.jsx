@@ -13,7 +13,7 @@ const Operation = ({operation, result, setResult, setCurrentOperation, expressio
     }
     
     return (
-        <button className="col btn btn-secondary" onClick={operationHandler}>{operation}</button>
+        <button className="col btn btn-primary rounded-0 m-1" onClick={operationHandler}>{operation}</button>
     )
 }
 

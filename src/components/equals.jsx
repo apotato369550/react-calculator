@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 const Equals = ({result, setResult, expression, setExpression, setCurrentOperation, power}) => {
 
     const precedence = (operator) => {
-        if(operator == "+" || operator == "-"){
+        if(operator === "+" || operator === "-"){
             return 1;
-        } else if(operator == "*" || operator == "/"){
+        } else if(operator === "*" || operator === "/"){
             return 2;
         }
     
@@ -87,7 +87,7 @@ const Equals = ({result, setResult, expression, setExpression, setCurrentOperati
     }, [expression]);
 
     return (
-        <button className="col btn btn-success" onClick={equalsHandler}>=</button>
+        <button className="col btn btn-success rounded-0 m-1" onClick={equalsHandler}>=</button>
     )
 }
 
