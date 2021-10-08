@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Reset = ({setExpression, setResult, setCurrentOperation}) =>{
+const Reset = ({setExpression, setResult, setCurrentOperation, power}) =>{
     const resetHandler = (event) => { 
+        if(!power){
+            return;
+        }
         console.log("Remove handler has been pressed");
         // pop two elements from expression
         // set it as that new array
@@ -10,12 +13,12 @@ const Reset = ({setExpression, setResult, setCurrentOperation}) =>{
         setCurrentOperation("")
         // i should probably test this out
         // do further testing
-        // figure out what it does to the operands and operators
+        // figure out what it does to the operands and operatorsgi
         return;
     }
 
     return (
-        <button onClick={resetHandler}>Reset</button>
+        <button className="col btn btn-danger rounded-0 m-1" onClick={resetHandler}>Reset</button>
     )
 }
 

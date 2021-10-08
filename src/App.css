@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+/*
+edit font and shit ova here
+*/
+body {
+  font-family: "Lucida Console";
+  background-color: blue;
+  color: blue;
+}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Delete = ({result, setResult}) =>{
+const Delete = ({result, setResult, power}) =>{
     const deleteHandler = (event) => { 
+        if(!power){
+            return;
+        }
         console.log("Delete handler has been pressed");
         // result/newresult is not a string
         if(result.length > 1 && result !== "0"){
@@ -15,7 +18,7 @@ const Delete = ({result, setResult}) =>{
     }
 
     return (
-        <button onClick={deleteHandler}>Delete Digit</button>
+        <button className="col btn btn-danger rounded-0 m-1" onClick={deleteHandler}>Del</button>
     )
 }
 

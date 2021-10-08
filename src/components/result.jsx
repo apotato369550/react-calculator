@@ -1,8 +1,11 @@
 import React from "react";
 
-const Result = ({result}) => {
+const Result = ({result, currentOperation}) => {
     return (
-        <span>{result}</span>
+        <div className="row">
+            <span className="col m-2">{result}</span>
+            <span className="col m-2">{currentOperation}</span>
+        </div>
     )
 }
 
